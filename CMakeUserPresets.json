@@ -1,0 +1,31 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "DebugAll",
+            "inherits": [
+                "Debug"
+            ],
+            "binaryDir": "${sourceDir}/build/debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "BUILD_EXAMPLE": "ON",
+                "BUILD_TEST": "ON",
+                "BUILD_PERF_TEST": "ON"
+            }
+        },
+        {
+            "name": "Custom",
+            "inherits": [
+                "Benchmark"
+            ],
+            "binaryDir": "${sourceDir}/build/release",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+                "BUILD_EXAMPLE": "OFF",
+                "BUILD_TEST": "OFF",
+                "BUILD_PERF_TEST": "ON"
+            }
+        }
+    ]
+}

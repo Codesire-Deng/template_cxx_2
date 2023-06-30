@@ -1,0 +1,12 @@
+CompileFlags:
+  Add:
+    # - -std=gnu++20
+    - --cuda-path=/opt/cuda
+    - --cuda-gpu-arch=sm_75
+    - -L/opt/cuda/lib
+    - -I/opt/cuda/include
+    - -fcoroutines
+  Remove:
+    - --generate-code*
+    - -forward-unknown-to-host-compiler
+  # CompilationDatabase: build
